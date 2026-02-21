@@ -7,6 +7,18 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+---
+
+## Autenticação
+
+Esta aplicação agora possui fluxo de login, cadastro e recuperação de senha.  Após um `POST` em `/auth/login` o token JWT é guardado em `localStorage` e enviado automaticamente em todas as requisições.
+
+As rotas de CRUD estão protegidas; um usuário não autenticado é redirecionado para `/login`.
+
+Defina a variável `VITE_API_URL` para apontar para o backend e inicie com `npm install && npm run dev`.
+
+---
+
 ## React Compiler
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
